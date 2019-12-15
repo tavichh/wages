@@ -1,10 +1,14 @@
 mod wages;
 
 fn main() {
-        let term = console::Term::stdout();
-        let title = "Wages";
-        let description = "A simple wage calculator written in rust";
-        let author = "tavichh";
+        let term: 
+            console::Term = console::Term::stdout();
+        let title: 
+            &str = "Wages";
+        let description: 
+            &str = "A simple wage calculator written in rust";
+        let author: 
+            &str = "tavichh";
     
         term.set_title(title);
     
