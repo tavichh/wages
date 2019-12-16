@@ -17,19 +17,26 @@ fn main() {
         println!("", );
         loop{
             println!("Please enter your hourly wage.", );
-            let wage = term.read_line()
+            let wage = &term.read_line()
                 .unwrap()
                 .parse::<f32>();
         
             println!("Please enter how many hours you worked.");
-            let hours = term.read_line()
+            let hours = &term.read_line()
                 .unwrap()
                 .parse::<f32>();
-        
-            println!("You have made: ${}",
-                wages::evaluate(wage.unwrap(), 
-                hours.unwrap()));
-        
+            println!("You have earned ${}",
+                wages::evaluate(
+                &wage
+                    .as_ref()
+                    .unwrap(), 
+                &hours
+                    .as_ref()
+                    .unwrap()));
+            wages::show_table(
+                &wage
+                    .as_ref()
+                    .unwrap());
             println!("Press a key to preform another calculation.");
             term.read_key().ok();
             term.clear_screen().ok();
