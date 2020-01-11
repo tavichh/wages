@@ -8,6 +8,6 @@ simple wage calculator
 ![](https://img.shields.io/github/issues-raw/tavichh/wages)
 
 wages is a calculator which I designed to teach me the basics of rustlang. All it does is `y^1=(n*x)` and display the data in a nice little chart. 
-![](img\main.gif)
+![](img/main.gif)
 
 Enjoy!
